@@ -2,7 +2,8 @@
   <div class="wraper">
     <a href="{{ site.baseurl }}/" class="website-title">
       {% if site.logo-image %}
-        <img alt="{{ site.name }}" src="{{ site.baseurl }}{{ site.logo-image }}">
+        <img alt="{{ site.name }}" src="{{ site.baseurl }}{{ site.logo-image }}" class="header__logo">
+        {{ site.displayed_name }}
       {% else %}
         {{ site.name }}
       {% endif %}

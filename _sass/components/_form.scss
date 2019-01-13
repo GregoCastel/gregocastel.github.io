@@ -1,0 +1,16 @@
+.input {
+	display: block;
+	width: 100%;
+	padding: .7rem .5rem;
+	border: 1px solid $light-grey;
+	border-radius: 5px;
+
+	&:focus, &:active {
+		border-color: $brand-color;
+	}
+}
+
+.label {
+	margin-bottom: .5rem;
+	display: block;
+}

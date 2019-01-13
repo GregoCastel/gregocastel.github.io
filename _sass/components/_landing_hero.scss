@@ -1,0 +1,28 @@
+.landing-hero {
+	@extend .row;
+	@extend .middle-sm;
+	// background-image: linear-gradient(to bottom, #FFF, #e8e7e7);
+	min-height: calc(100vh - #{$navbar-height});
+	overflow: hidden;
+	background-color: #FAFAFA;
+	border-bottom: 2px solid darken(#FAFAFA, 10%);
+	margin-left: 0 !important;
+	margin-right: 0 !important;
+
+	&__copy {
+		margin-bottom: 2rem;
+	}
+
+	&__headline {
+		color: $brand-color;
+		font-size: 1.9rem;
+	}
+
+	&__subheadline {
+		color: $dark-grey;
+	}
+
+	&__cta {
+		margin-top: 1rem;
+	}
+}

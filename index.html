@@ -2,42 +2,116 @@
 layout: default
 home: true
 ---
+<div class="landing-hero">
+  <div class="container">
+    <div class="row middle-xs center-xs start-md">
+      <div class="col-xs-12 col-sm-10 col-md-6 col-md-offset-1">
+        <div class="landing-hero__copy">
+          <h1 class="landing-hero__headline">Découvrez qui sont vos visiteurs</h1>
+          <p class="landing-hero__subheadline">
+            Comptez et analysez les visiteurs de votre point d'accueil touristique: OTSI, musée, point information tourisme etc.
+          </p>
 
+          <a class="button button--branded landing-hero__cta" href="/contact">
+            démarrez un mois d'essai gratuit sans engagement
+          </a>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-5 col-md-4">
+        {% include screenshot.html %}
+      </div>
+    </div>
+  </div>
+</div> 
 
+<div class="landing-features">
+  <div class="container">
+    <div class="row center-xs push-bottom--large">
+      <div class="col-xs-12 col-sm-8 col-md-6">
+        <h2 class="landing-feature__copy-title">
+          <strong class="">Sans installation ni engagement</strong>
+        </h2>
+        <p class="landing-feature__copy">
+          <strong>Tout se passe sur internet</strong>: 0 installation, 0 mise à jour, 0 sauvegarde de votre côté, 0 licence... vous pouvez commencer tout de suite, sans aucun engagement
 
-{% for post in paginator.posts %}
+          <br /><br />
+          <a href="#" class="button button--hollow">Essayer gratuitement et sans engagement ></a>
+        </p>
+      </div>
+    </div>
 
-{% assign minutes = post.content | number_of_words | divided_by: 180 %}
-{% if minutes == 0 %}
-  {% assign read-time = site.var_less_than_a_minute_read %}
-{% else %}
-  {% assign read-time = minutes | append: "&nbsp;" | append: site.var_min_read %}
-{% endif %}
+    <div class="row landing-feature push-bottom--large middle-xs center-xs">
+      <div class="col-sm-6">
+        <div class="row a-left">
+          <div class="col-xs-12">
+            <h2 class="landing-feature__copy-title">
+              <strong class="branded">
+                Enregistrez
+              </strong>
+              vos visites
+            </h2>
+          </div>
+          <div class="col-xs col-xs-offset-1">
+            <p class="landing-feature__copy-subtitle">
+              <strong>rapidement</strong>
+            </p>
+            <p class="landing-feature__copy">
+              Tout a été fait pour limiter le nombre de clics nécessaires: dans la majorité des cas, un ou deux suffiront !
+            </p>
 
-  <article>
-    <span class="meta">
-      {% if site.display-author-front-page %}
-        {% if post.author.name %}
-          {{ post.author.name }} •
-        {% else %}
-          {% if site.author.name %}
-            {{ site.author.name }} •
-          {% endif %}
-        {% endif %}
-      {% endif %}
-      {{ post.date | date: site.date_format }} • {{ read-time }}</span>
-  	<a href="{{ post.url | prepend: site.baseurl }}"><h1>{{ post.title }}</h1></a>
-      <p>
-      {% if post.summary %}
-        {{ post.summary }}&nbsp;<a class="read-more" href="{{ post.url | prepend: site.baseurl }}">{{ site.var_read }}  →</a>
-      {% else %}
-        {{ post.excerpt | remove: '<p>' | remove: '</p>' }}&nbsp;<a class="read-more" href="{{ post.url | prepend: site.baseurl }}">{{ site.var_read }}  →</a>
-      {% endif %}
-      </p>
+            <p class="landing-feature__copy-subtitle">
+              <strong>facilement</strong>
+            </p>
+            <p class="landing-feature__copy">
+              Il suffit de cliquer sur des boutons déjà paramétrés: 0 formation requise pour les conseillers en séjour ou agents d'accueil !
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4 show-sm-up">
+        <img src="/img/departing.svg" alt="Statify" />
+      </div>
+    </div>
 
-  </article>
-{% endfor %}
+    <div class="row landing-feature middle-xs center-xs push-top--large">
 
-{% if paginator.previous_page or paginator.next_page %}
-  {% include pagination.html %}
-{% endif %}
+      <div class="col-sm-4 show-sm-up">
+        <img src="/img/pie_chart.svg" alt="Statify" />
+      </div>
+      <div class="col-sm-6 a-left">
+        <div class="row">
+          <div class="col-xs-12">
+            <h2 class="landing-feature__copy-title">
+              Consultez vos
+              <strong class="branded">
+                statistiques
+              </strong>
+            </h2>
+          </div>
+          <div class="col-xs col-xs-offset-1">
+            <p class="landing-feature__copy-subtitle">
+              <strong>quand vous voulez</strong>
+            </p>
+            <p class="landing-feature__copy">
+              Découvrez qui sont vos visiteurs: d'où ils viennent, pour quelle raison, à quelle heure, à quelle période... et plus encore !
+            </p>
+
+            <p class="landing-feature__copy-subtitle">
+              <strong>prenez des décisions</strong>
+            </p>
+            <p class="landing-feature__copy">
+              Optimisez vos horaires d'ouverture en fonction de votre fréquentation, ciblez vos communications, créez de nouvelles offres.. vous apprendrez beaucoup de toutes ces données
+            </p>
+
+            <p class="landing-feature__copy-subtitle">
+              <strong>valorisez votre activité</strong>
+            </p>
+            <p class="landing-feature__copy">
+              Transmettez des statistiques de fréquentation fiables à qui vous voulez ou construisez des rapports personnalisés à partir de vos données brutes !
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

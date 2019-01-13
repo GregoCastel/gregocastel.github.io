@@ -1,6 +1,7 @@
 
 # The name of your website.
 name: Holo Alfa
+displayed_name: Grégoire Castellazzi
 
 description:
 
@@ -70,7 +71,7 @@ display-author-post-page: true
 display-author-front-page: true
 
 # http://alanwsmith.com/jekyll-liquid-date-formatting-examples
-date_format: "%b %-d, %Y"
+date_format: "%d %m %Y"
 
 # Minimal screen-width after which the navigation will change position from
 # vertical to horizontal.

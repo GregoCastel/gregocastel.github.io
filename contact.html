@@ -1,15 +1,34 @@
 ---
-layout: page
+layout: default
 title: Contact
 ---
 
+<section>
+	<div class="container">
+		<div class="row middle-xs center-xs push-bottom--large push-top--large">
+			<div class="col-xs-12 col-sm-12 col-md-10 col-lg-7">
 
-<form action="//formspree.io/{{ site.author.email }}"
-      method="POST">
-    <input type="email" name="_replyto" placeholder="{{ site.var_your_email }}">
-    <input type="hidden" name="_next" value="{{ site.baseurl }}/thanks" />
-    <input type="hidden" name="_subject" value="New submission from {{ site.url }}{{ site.baseurl }}" />
-    <input type="text" name="_gotcha" style="display:none" />
-    <textarea type="text" name="content" rows="8" placeholder="{{ site.var_your_message }}"></textarea>
-    <input type="submit" value="Send">
-</form>
+				<form action="//formspree.io/{{ site.author.email }}"
+				      method="POST">
+				  <div class="row a-left">
+				  	<div class="col-xs-12">
+				  		<label class="label" for="email">Votre email</label>
+				  		<input type="email" name="email" class="input" autofocus="true" />
+				  	</div>
+				  </div>
+
+				  <div class="row center-xs push-top--medium">
+				  	<div class="col-xs-12">
+				  		<input type="hidden" name="_replyto" class="input" placeholder="{{ site.var_your_email }}">
+					    <input type="hidden" name="_next" value="{{ site.baseurl }}/thanks" />
+					    <input type="hidden" name="_subject" value="New submission from {{ site.url }}{{ site.baseurl }}" />
+					    <input type="text" name="_gotcha" style="display:none" />
+					    <input type="submit" value="envoyer" class="button button--hollow">
+					   </div>
+					 </div>
+				</form>
+
+			</div>
+		</div>
+	</div>
+</section>

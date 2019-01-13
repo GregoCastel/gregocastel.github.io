@@ -1,0 +1,22 @@
+.landing-features {
+	margin: 6rem auto;
+}
+
+.landing-feature {
+	margin-bottom: 3rem;
+
+	&__copy-title {
+		font-size: 1.4rem;
+		font-weight: normal;
+	}
+
+	&__copy-subtitle {
+		color: $mid-grey;
+		font-variant: all-small-caps;
+		margin-bottom: -.5rem;
+	}
+
+	&__copy {
+		font-size: 1rem;
+	}
+}

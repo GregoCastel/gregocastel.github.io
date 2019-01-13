@@ -1,0 +1,81 @@
+.navbar {
+	border-bottom: 1px solid #eae8e8;
+	height: $navbar-height;
+
+	&__wraper {
+		height: $navbar-height;
+	}
+
+	&__logo {
+		display: inherit;
+		height: 3rem;
+		width: auto;
+		float: left;
+		margin-right: .5rem;
+	}
+
+	&__logo-text {
+		color: $brand-color;
+		font-variant: all-small-caps;
+		font-weight: 600;
+		font-size: 1.55rem;
+	}
+
+	&__logo-link {
+		line-height: 3rem;
+	}
+
+	&__link {
+		margin-right: 1rem;
+		
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	&__hamburger {
+		display: inline-block;
+		cursor: pointer;
+
+		span {
+			display: block;
+			width: 30px;
+			height: 5px;
+			background-color: $brand-color;
+			margin: 6px 0;
+			border-radius: 5px;
+		}
+
+		@media screen and (min-width: map-get($breakpoints, 'medium')) {
+			display: none;
+		}
+	}
+}
+
+.menu {
+	display: none;
+
+	&--active {
+		position: fixed;
+		top: $navbar-height;
+		height: calc(100vh - #{$navbar-height});
+		width: 100%;
+		background-color: white;
+		z-index: 9999;
+		display: block;
+		left: 0;
+		padding: 3rem 2rem;
+
+		.navbar__link {
+			display: block;
+			text-align: left;
+			margin: 1rem;
+			font-size: 1.3rem;
+		}
+	}
+
+	@media screen and (min-width: map-get($breakpoints, 'medium')) {
+		position: relative;
+		display: block;
+	}
+}

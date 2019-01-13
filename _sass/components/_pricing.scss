@@ -1,0 +1,81 @@
+
+.pricing {
+	border: 1px solid $light-grey;
+	border-radius: 3px;
+	margin-bottom: 1rem;
+
+	@media screen and (min-width: map-get($breakpoints, 'medium')) {
+		margin-bottom: 0rem;
+	}
+
+	&__header {
+		padding: 2rem;
+		border-bottom: 1px solid $light-grey;
+	}
+
+	&__offer-name {
+		font-weight: normal;
+		color: $mid-grey !important;
+		font-variant: all-small-caps;
+		margin: 0;
+		font-size: 1.3rem;
+	}
+
+	&__offer-price {
+		font-size: 2rem;
+		color: $brand-color;
+		margin: 0;
+		font-variant: all-small-caps;
+	}
+
+	&__main {
+		padding: 2rem;
+		background-color: #FAFAFA;
+	}
+
+	&__items {
+		margin: 0;
+		padding: 0;
+		padding-left: 1rem;
+		list-style: none;
+		text-align: left;
+	}
+
+	&__item {
+		font-size: 1.05rem;
+		margin-bottom: .5rem;
+
+		&::before {
+			content: "✓";
+			color: $brand-color;
+	  	display: inline-block;
+	  	width: 1em;
+	  	margin-left: -1em
+	  }
+
+	  &--negative {
+	  	&:before {
+	  		content: "✗";
+	  		color: $dark-grey;
+	  	}
+	  }
+	}
+
+	&__question-mark {
+		float: right;
+		display: inline-block;
+		height: .8rem;
+		width: .8rem;
+		border-radius: .8rem;
+		background-color: $text-color;
+		color: white;
+		text-align: center;
+		font-size: .7rem;
+		line-height: .8rem;
+
+		&:hover {
+			background-color: $brand-color;
+			color: white;
+		}
+	}
+}

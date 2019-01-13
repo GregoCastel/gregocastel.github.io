@@ -1,5 +1,30 @@
-<nav>
-  <a href="{{ site.baseurl }}/about/">About</a>
-  <a href="{{ site.baseurl }}/contact/">Contact</a>
-  <a href="{{ site.baseurl }}/archive/">Archive</a>
+<nav class="navbar">
+	<div class="container">
+		<div class="row middle-xs between-xs navbar__wraper">
+			<div class="col-xs-6">
+				<div class="row middle-xs">
+					<a href="/" class="navbar__logo-link">
+						<img src="/img/statifylogo.png" alt="Statify" class="navbar__logo" />
+						<span class="navbar__logo-text">
+							statify
+						</span>
+					</a>
+				</div>
+			</div>
+
+			<div class="col-xs-6 a-right">
+				<div class="menu" id="menu">
+					{% include menu.html %}
+				</div>
+
+				<a class="navbar__hamburger" id="collapse-menu" data-turbolinks="false">
+					<span></span>
+					<span></span>
+					<span></span>
+				</a>
+			</div>
+
+
+		</div>
+	</div>
 </nav>

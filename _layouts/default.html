@@ -4,28 +4,24 @@
 	{% include head.html %}
 </head>
 <body>
-	{% if page.cover-image %}
-	<div class="cover-image-container">
-		<img alt="Cover image" src="{{ site.baseurl }}/img/covers/{{ page.cover-image }}">
-	</div>
-	{% endif %}
+	{% include navigation.html %}
 
-	{% include header.html %}
-	
-	<div class="wrap">
-		{{ content }}
-	  <script>
-	    $("article").fitVids();
-	    $('article p').each(function(i){
-				if (($(this).find('img').length) && (!$.trim($(this).text()).length))  {
-					$(this).addClass('img-only');
-				}
-				if ($.trim($(this).text()).length - $.trim($(this).find('small').text()).length == 0 && ($(this).find('img').length)){
-					$(this).addClass('img-only-source');
-				}
-	  	});
-	  </script>
-	</div>
+	{{ content }}
+
 	{% include footer.html %}
+	
+	<script>
+		$(document).on('turbolinks:load', function() {
+			if ($("#menu").hasClass('menu--active')) {
+				$("#menu").removeClass('menu--active');
+				$("body").removeClass('no-scroll');
+			}
+
+			$("#collapse-menu").off().on('click', function() {
+				$("#menu").toggleClass('menu--active');
+				$('body').toggleClass('no-scroll');
+			})
+		});
+	</script>
 </body>
 </html>
